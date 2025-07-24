@@ -1,1 +1,1 @@
-# blue-stocks-
+# blue-stocks
