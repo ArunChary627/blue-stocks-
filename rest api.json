@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "Bluestock IPO API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All IPOs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/ipos/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "ipos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create New IPO",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"ABC Corp\",\n  \"date\": \"2025-07-01\",\n  \"price\": \"312.00\",\n  \"lot_size\": 30,\n  \"status\": \"upcoming\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/ipos/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "ipos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get IPO by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/ipos/1/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "ipos",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update IPO by ID",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"ABC Corp\",\n  \"date\": \"2025-07-02\",\n  \"price\": \"320.00\",\n  \"lot_size\": 35,\n  \"status\": \"listed\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/ipos/1/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "ipos",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete IPO by ID",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/ipos/1/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "ipos",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
